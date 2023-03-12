@@ -12,8 +12,10 @@ app.use(express.json());
 app.use(bodyParser.json())
 
 const UserRoute = require("./Routes/userRoutes");
+const MediaRoute = require("./Routes/mediaRoutes");
 
 app.use("/user", UserRoute); 
+app.use("/media", MediaRoute); 
 
 app.get("/", (req, res) => {
     console.log('Sequalize server is connected')
